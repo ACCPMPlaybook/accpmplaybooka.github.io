@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNV PM Knowledge Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        accent: '#722ED1',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-hover {
+                @apply transition-all duration-300 hover:shadow-xl;
+            }
+            .title-underline {
+                @apply relative inline-block cursor-pointer;
+            }
+            .title-underline::after {
+                content: '';
+                @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+            }
+            .title-underline.active::after,
+            .title-underline:hover::after {
+                @apply w-full;
+            }
+            .list-item {
+                @apply relative pl-8 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors duration-200;
+            }
+            .list-item::before {
+                content: '→';
+                @apply absolute left-2 text-primary transition-transform duration-300;
+            }
+            .list-item:hover::before {
+                @apply transform translate-x-1;
+            }
+            .list-item a {
+                @apply text-gray-700 hover:text-primary transition-colors duration-200;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="index.html" class="text-primary font-medium mb-4 md:mb-0 flex items-center">
+                    <i class="fa fa-arrow-left mr-2"></i> Back to Home
+                </a>
+                <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark text-center title-underline" id="kb-title">
+                    LNV PM Knowledge Base
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Process Related Section -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden section-hover">
+            <div class="h-36 md:h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/20/1200/400')">
+                <div class="h-full w-full bg-primary/70 flex items-center px-6">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white title-underline">Process Related</h2>
+                </div>
+            </div>
+            <div class="p-6 md:p-8">
+                <ul class="space-y-1">
+                    <li class="list-item">
+                        <a href="pdx-process.html">PDx Process</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="eol-process.html">EOL Process</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Template & Best Practices Section -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden section-hover">
+            <div class="h-36 md:h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/48/1200/400')">
+                <div class="h-full w-full bg-secondary/70 flex items-center px-6">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white title-underline">Template & Best Practices</h2>
+                </div>
+            </div>
+            <div class="p-6 md:p-8">
+                <ul class="space-y-1">
+                    <li class="list-item">
+                        <a href="mrd-od.html">MRD&OD</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="volume-call.html">Volume Call</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="ial.html">IAL</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="disclosure.html">Disclosure</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="datasheet.html">Datasheet</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Guidelines Section -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden section-hover">
+            <div class="h-36 md:h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/96/1200/400')">
+                <div class="h-full w-full bg-accent/70 flex items-center px-6">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white title-underline">Guidelines</h2>
+                </div>
+            </div>
+            <div class="p-6 md:p-8">
+                <ul class="space-y-1">
+                    <li class="list-item">
+                        <a href="cmf-guideline.html">CMF Guideline</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="branding-guideline.html">Branding Guideline</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="packaging-guideline.html">Packaging Guideline</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="customer-segmentation.html">Customer Segmentation & Profiles</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Acc PM Playbook. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 点击标题时添加下划线效果
+        document.getElementById('kb-title').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+
+        // 为所有部分标题添加点击下划线效果
+        document.querySelectorAll('section h2.title-underline').forEach(title => {
+            title.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 添加元素进入动画
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 初始化各部分样式
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
