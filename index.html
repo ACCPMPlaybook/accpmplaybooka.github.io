@@ -43,6 +43,14 @@
             .title-underline:hover::after {
                 @apply w-full;
             }
+            .module-title-underline::after {
+                @apply bg-primary;
+            }
+            .module-title-underline:hover::after,
+            .module-title-underline.active::after {
+                @apply bg-white;
+            }
+            
             .nav-link {
                 @apply relative overflow-hidden;
             }
@@ -53,35 +61,45 @@
             .nav-link:hover::after {
                 @apply transform scale-x-100;
             }
+            .title-gradient-bg {
+                background: 
+                    linear-gradient(135deg, rgba(22, 93, 255, 0.2) 0%, rgba(114, 46, 209, 0.2) 100%),
+                    url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 38c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm96 95c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-45c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 63c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 150c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm112-86c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 126c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 123c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 151c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 101c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 120c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234a5568' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+                @apply py-6 px-4 rounded-xl;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50 font-sans flex flex-col min-h-screen">
     <!-- Header -->
-    <header class="bg-white shadow-sm transition-all duration-300" id="main-header">
-        <div class="container mx-auto px-4 py-6">
-            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark text-center title-underline" id="main-title">
-                Acc PM Playbook
-            </h1>
+    <header class="bg-white shadow-sm transition-all duration-300 py-8" id="main-header">
+        <div class="container mx-auto px-4">
+            <div class="title-gradient-bg max-w-6xl mx-auto">
+                <h1 class="text-[clamp(1.6rem,5vw,2.4rem)] font-bold text-gray-700 text-center title-underline" id="main-title">
+                    Acc PM Playbook
+                </h1>
+            </div>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
-        <div class="grid md:grid-cols-2 gap-8">
+    <main class="container mx-auto px-4 py-10 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <!-- LNV PM Knowledge Base Module -->
             <a href="knowledge-base.html" class="block group">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover h-full transition-all duration-500 group-hover:shadow-primary/10">
-                    <div class="h-48 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://picsum.photos/id/180/800/400')">
-                        <div class="h-full w-full bg-primary/60 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/70">
-                            <div class="text-center p-6">
-                                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white mb-2 title-underline">LNV PM Knowledge Base</h2>
-                                <p class="text-white text-lg transform translate-y-0 opacity-100 transition-all duration-300 group-hover:translate-y-1">Process & Documentation</p>
+                    <div class="relative pb-[133.33%] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/id/180/600/800')">
+                            <div class="h-full w-full bg-primary/60 flex items-center justify-center transition-all duration-300 group-hover:bg-primary/70">
+                                <div class="text-center p-6">
+                                    <h2 class="text-[clamp(1.9rem,5vw,2.4rem)] font-bold text-white mb-2 title-underline module-title-underline">LNV PM Knowledge Base</h2>
+                                    <p class="text-white text-lg transform translate-y-0 opacity-100 transition-all duration-300 group-hover:translate-y-1">Process & Documentation</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="p-6">
-                        <p class="text-gray-600 mb-4 transition-all duration-300 group-hover:text-gray-800">Access detailed processes, templates, and guidelines for effective product management in the LNV division.</p>
+                        <p class="text-gray-600 mb-4 transition-all duration-300 group-hover:text-gray-800">Access detailed processes and templates for effective product management in LNV.</p>
                         <span class="inline-flex items-center text-primary font-medium nav-link">
                             Explore <i class="fa fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
                         </span>
@@ -90,13 +108,15 @@
             </a>
 
             <!-- PM Essentials Module -->
-            <a href="#" class="block group">
+            <a href="pm-essentials.html" class="block group">
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover h-full transition-all duration-500 group-hover:shadow-accent/10">
-                    <div class="h-48 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://picsum.photos/id/3/800/400')">
-                        <div class="h-full w-full bg-accent/60 flex items-center justify-center transition-all duration-300 group-hover:bg-accent/70">
-                            <div class="text-center p-6">
-                                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white mb-2 title-underline">PM Essentials</h2>
-                                <p class="text-white text-lg transform translate-y-0 opacity-100 transition-all duration-300 group-hover:translate-y-1">General knowledge & Skill development</p>
+                    <div class="relative pb-[133.33%] overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://picsum.photos/id/1/600/800')">
+                            <div class="h-full w-full bg-accent/60 flex items-center justify-center transition-all duration-300 group-hover:bg-accent/70">
+                                <div class="text-center p-6">
+                                    <h2 class="text-[clamp(1.9rem,5vw,2.4rem)] font-bold text-white mb-2 title-underline module-title-underline">PM Essentials</h2>
+                                    <p class="text-white text-lg transform translate-y-0 opacity-100 transition-all duration-300 group-hover:translate-y-1">General knowledge & Skill development</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -112,9 +132,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white py-8 mt-16">
+    <footer class="bg-dark text-white py-8 mt-12">
         <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2023 Acc PM Playbook. All rights reserved.</p>
+            <p>&copy; 2025 Accessories & ET. All rights reserved.</p>
         </div>
     </footer>
 
@@ -127,12 +147,12 @@
         // 滚动时改变 header 样式
         window.addEventListener('scroll', function() {
             const header = document.getElementById('main-header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-3', 'shadow');
-                header.classList.remove('py-6', 'shadow-sm');
+            if (window.scrollY > 30) {
+                header.classList.add('py-4', 'shadow');
+                header.classList.remove('py-8', 'shadow-sm');
             } else {
-                header.classList.add('py-6', 'shadow-sm');
-                header.classList.remove('py-3', 'shadow');
+                header.classList.add('py-8', 'shadow-sm');
+                header.classList.remove('py-4', 'shadow');
             }
         });
 
@@ -146,22 +166,22 @@
             });
         });
 
-        // 为卡片添加进入动画
+        // 卡片进入动画
         const animateCards = () => {
             const cards = document.querySelectorAll('.card-hover');
             cards.forEach((card, index) => {
                 setTimeout(() => {
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
-                }, 100 * index);
+                }, 150 * index);
             });
         };
 
         // 初始化卡片样式
         document.querySelectorAll('.card-hover').forEach(card => {
             card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         });
 
         // 页面加载完成后执行动画
