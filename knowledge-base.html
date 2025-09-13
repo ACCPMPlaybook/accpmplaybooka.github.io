@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LNV PM Knowledge Base</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36CFC9',
+                        accent: '#722ED1',
+                        neutral: '#F5F7FA',
+                        dark: '#1D2129'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-hover {
+                @apply transition-all duration-300 hover:shadow-xl;
+            }
+            .title-underline {
+                @apply relative inline-block cursor-pointer;
+            }
+            .title-underline::after {
+                content: '';
+                @apply absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300;
+            }
+            .title-underline.active::after,
+            .title-underline:hover::after {
+                @apply w-full;
+            }
+            .list-item {
+                @apply relative pl-8 py-2 border-b border-gray-100 last:border-0 hover:bg-gray-50 transition-colors duration-200;
+            }
+            .list-item::before {
+                content: '→';
+                @apply absolute left-2 text-primary transition-transform duration-300;
+            }
+            .list-item:hover::before {
+                @apply transform translate-x-1;
+            }
+            .list-item a {
+                @apply text-gray-700 hover:text-primary transition-colors duration-200;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="index.html" class="text-primary font-medium mb-4 md:mb-0 flex items-center">
+                    <i class="fa fa-arrow-left mr-2"></i> Back to Home
+                </a>
+                <h1 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-dark text-center title-underline" id="kb-title">
+                    LNV PM Knowledge Base
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Process Related Section -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden section-hover">
+            <div class="h-36 md:h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/20/1200/400')">
+                <div class="h-full w-full bg-primary/70 flex items-center px-6">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white title-underline">Process Related</h2>
+                </div>
+            </div>
+            <div class="p-6 md:p-8">
+                <ul class="space-y-1">
+                    <li class="list-item">
+                        <!-- 修改后的链接 -->
+                        <a href="pdx-process.html">PDx Process</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:p:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/Tools%20and%20Process%20Trainings/Product%20Transition%20%26%20EOL%20Process.pptx?d=w907226d04b94450b99ad3d2e2e85a038&csf=1&web=1&e=xEZfry" target="_blank">EOL Process</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Template & Best Practices Section -->
+        <section class="mb-12 bg-white rounded-xl shadow-lg overflow-hidden section-hover">
+            <div class="h-36 md:h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/48/1200/400')">
+                <div class="h-full w-full bg-secondary/70 flex items-center px-6">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white title-underline">Template & Best Practices</h2>
+                </div>
+            </div>
+            <div class="p-6 md:p-8">
+                <ul class="space-y-1">
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/PM%20Templates%20%26%20Best%20Practices/MRD%20Templates?csf=1&web=1&e=NLb5uA" target="_blank">MRD&OD</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/PM%20Templates%20%26%20Best%20Practices/Volume%20Call%20Template?csf=1&web=1&e=pnTFpX" target="_blank">Volume Call</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:x:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/Tools%20and%20Process%20Trainings/Accessory%20Facet%20Rule.xlsx?d=w76686b7bdc3b40909b587d5be74a2bfb&csf=1&web=1&e=M2j4vk" target="_blank">IAL</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/PM%20Templates%20%26%20Best%20Practices/Disclosure%20Template?csf=1&web=1&e=caun85" target="_blank">Disclosure</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/PM%20Templates%20%26%20Best%20Practices/Datasheet%20Template?csf=1&web=1&e=uC4JJe" target="_blank">Datasheet</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Guidelines Section -->
+        <section class="bg-white rounded-xl shadow-lg overflow-hidden section-hover">
+            <div class="h-36 md:h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/96/1200/400')">
+                <div class="h-full w-full bg-accent/70 flex items-center px-6">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white title-underline">Guidelines</h2>
+                </div>
+            </div>
+            <div class="p-6 md:p-8">
+                <ul class="space-y-1">
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/CMF%20Guidelines?csf=1&web=1&e=BjfwVF" target="_blank">CMF Guideline</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/Lenovo%20Branding%20Guideline?csf=1&web=1&e=qOUFr7" target="_blank">Branding Guideline</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/Accessories%20Packaging%20Guideline?csf=1&web=1&e=vXl0ys" target="_blank">Packaging Guideline</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://lenovonam.sharepoint.com/:f:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/Lenovo%20Customer%20Segmentation%20and%20Profiles?csf=1&web=1&e=ZBvmFb" target="_blank">Customer Segmentation & Profiles</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Acc PM Playbook. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 点击标题时添加下划线效果
+        document.getElementById('kb-title').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+
+        // 为所有部分标题添加点击下划线效果
+        document.querySelectorAll('section h2.title-underline').forEach(title => {
+            title.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 添加元素进入动画
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // 初始化各部分样式
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
