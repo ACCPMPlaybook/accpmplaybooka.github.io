@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDx Process</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C6ECB',
+                        secondary: '#4CAF50',
+                        accent: '#FF9800',
+                        neutral: '#F5F7FA',
+                        'neutral-dark': '#E4E7EB',
+                        'text-primary': '#2D3748',
+                        'text-secondary': '#718096',
+                        'step-bg': '#E3F2FD',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'card': '0 4px 12px rgba(0, 0, 0, 0.05)',
+                        'card-hover': '0 10px 25px rgba(44, 110, 203, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .gradient-accent {
+                background: linear-gradient(90deg, #2C6ECB 0%, #4A89DC 100%);
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .flow-container {
+                scrollbar-width: thin;
+                scrollbar-color: #2C6ECB #E3F2FD;
+            }
+            .flow-container::-webkit-scrollbar {
+                height: 6px;
+            }
+            .flow-container::-webkit-scrollbar-track {
+                background: #E3F2FD;
+                border-radius: 10px;
+            }
+            .flow-container::-webkit-scrollbar-thumb {
+                background-color: #2C6ECB;
+                border-radius: 10px;
+            }
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .step-card {
+            transition: all 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+            opacity: 0;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        .stagger-7 { animation-delay: 0.7s; }
+
+        .link-text {
+            color: #2C6ECB;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .link-text:hover {
+            color: #1a56db;
+            text-decoration: none;
+        }
+        
+        .gate-node {
+            background-color: #FF9800;
+            color: white;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body class="bg-white font-inter text-text-primary">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold tracking-tight text-primary">PDx Process</h1>
+            <a href="knowledge-base.html" class="text-primary hover:text-primary/80 text-lg font-medium transition-colors flex items-center">
+                <i class="fa fa-arrow-left mr-2"></i>
+                Back to Knowledge Base
+            </a>
+        </div>
+    </header>
+
+    <!-- Color Bar -->
+    <div class="gradient-accent h-[clamp(1.8rem,4vw,2.8rem)] w-full"></div>
+
+    <!-- What is PDx Process Section -->
+    <section class="py-16 md:py-24 bg-neutral">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-xl p-8 md:p-12 shadow-card w-full max-w-none">
+                <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold text-text-primary mb-6">What is PDx Process?</h2>
+                <p class="text-lg mb-6 text-text-secondary leading-relaxed text-balance">
+                    The PDx Process is a structured framework that streamlines the development of accessory products from concept to launch and beyond. It ensures cross-functional alignment, quality control, and the timely delivery of products that meet both customer needs and business goals.
+                </p>
+                <p class="text-lg text-text-secondary leading-relaxed text-balance">
+                    It advances through distinct stages: portfolio planning, product definition, concept validation, plan, development & qualification, launch preparation, and lifecycle management. Each stage uses specific checkpoints and deliverables to ensure quality and consistency across all products.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDx Process Flow Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-[clamp(1.5rem,3vw,2.2rem)] font-bold text-center text-text-primary mb-12">PDx Process Flow</h2>
+            
+            <!-- Horizontal scrollable flow -->
+            <div class="flow-container overflow-x-auto pb-8">
+                <div class="flex space-x-8 px-2 min-w-max">
+                    <!-- Step 1 - Portfolio Planning -->
+                    <div class="flex flex-col items-center w-64 step-card fade-in stagger-1">
+                        <div class="bg-step-bg rounded-lg p-4 w-full text-center mb-4 shadow-sm border border-primary/10">
+                            <h3 class="text-xl font-bold text-primary">Portfolio Planning</h3>
+                        </div>
+                        <div class="bg-white rounded-lg p-5 h-64 shadow-card border border-neutral-dark flex flex-col justify-between">
+                            <div>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Define business goal</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Market survey</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Customer study</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Competitive Analysis</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Identify Gaps</span>
+                                </p>
+                                <p class="text-sm flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Prioritize requests</span>
+                                </p>
+                            </div>
+                            <div class="text-xs mt-2 font-medium">
+                                <a href="portfolio-planning-bible.html" class="link-text">Portfolio Planning Bible</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow with Gate C -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa fa-long-arrow-right text-primary text-2xl opacity-70"></i>
+                        <div class="gate-node">Gate C</div>
+                    </div>
+                    
+                    <!-- Step 2 - Product Definition -->
+                    <div class="flex flex-col items-center w-64 step-card fade-in stagger-2">
+                        <div class="bg-step-bg rounded-lg p-4 w-full text-center mb-4 shadow-sm border border-primary/10">
+                            <h3 class="text-xl font-bold text-primary">Product Definition</h3>
+                        </div>
+                        <div class="bg-white rounded-lg p-5 h-64 shadow-card border border-neutral-dark flex flex-col justify-between">
+                            <div>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Market Requirements</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Competitive Analysis</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Positioning Strategy</span>
+                                </p>
+                                <p class="text-sm flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Develop MRD (OD)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow with CKO -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa fa-long-arrow-right text-primary text-2xl opacity-70"></i>
+                        <div class="gate-node">CKO</div>
+                    </div>
+                    
+                    <!-- Step 3 - Concept Validation -->
+                    <div class="flex flex-col items-center w-64 step-card fade-in stagger-3">
+                        <div class="bg-step-bg rounded-lg p-4 w-full text-center mb-4 shadow-sm border border-primary/10">
+                            <h3 class="text-xl font-bold text-primary">Concept Validation</h3>
+                        </div>
+                        <div class="bg-white rounded-lg p-5 h-64 shadow-card border border-neutral-dark flex flex-col justify-between">
+                            <div>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Design Validation</span>
+                                </p>
+                                <p class="text-sm flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>RFI (Request for information)</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow with PKO -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa fa-long-arrow-right text-primary text-2xl opacity-70"></i>
+                        <div class="gate-node">PKO</div>
+                    </div>
+                    
+                    <!-- Step 4 - Plan -->
+                    <div class="flex flex-col items-center w-64 step-card fade-in stagger-4">
+                        <div class="bg-step-bg rounded-lg p-4 w-full text-center mb-4 shadow-sm border border-primary/10">
+                            <h3 class="text-xl font-bold text-primary">Plan</h3>
+                        </div>
+                        <div class="bg-white rounded-lg p-5 h-64 shadow-card border border-neutral-dark flex flex-col justify-between">
+                            <div>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>RFQ (Request for Quotation)</span>
+                                </p>
+                                <p class="text-sm flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Volume call</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow with DDS -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa fa-long-arrow-right text-primary text-2xl opacity-70"></i>
+                        <div class="gate-node">DDS</div>
+                    </div>
+                    
+                    <!-- Step 5 - Development & Qualification -->
+                    <div class="flex flex-col items-center w-64 step-card fade-in stagger-5">
+                        <div class="bg-step-bg rounded-lg p-4 w-full text-center mb-4 shadow-sm border border-primary/10">
+                            <h3 class="text-xl font-bold text-primary">Development & Qualification</h3>
+                        </div>
+                        <div class="bg-white rounded-lg p-5 h-64 shadow-card border border-neutral-dark flex flex-col justify-between">
+                            <div>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>BC - for biz case verification</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Disclosure (SS-90D, 60D, 30D)</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Datasheet (SS-30D)</span>
+                                </p>
+                                <p class="text-sm flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Product Photography</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow -->
+                    <div class="flex items-center">
+                        <i class="fa fa-long-arrow-right text-primary text-2xl opacity-70"></i>
+                    </div>
+                    
+                    <!-- Step 6 - Launch -->
+                    <div class="flex flex-col items-center w-64 step-card fade-in stagger-6">
+                        <div class="bg-step-bg rounded-lg p-4 w-full text-center mb-4 shadow-sm border border-primary/10">
+                            <h3 class="text-xl font-bold text-primary">Launch</h3>
+                        </div>
+                        <div class="bg-white rounded-lg p-5 h-64 shadow-card border border-neutral-dark flex flex-col justify-between">
+                            <div>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>BPT & IAL</span>
+                                </p>
+                                <p class="text-sm mb-3 flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>Corelist</span>
+                                </p>
+                                <p class="text-sm flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>.com/Smartfind/PSREF checking</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow with SS -->
+                    <div class="flex flex-col items-center">
+                        <i class="fa fa-long-arrow-right text-primary text-2xl opacity-70"></i>
+                        <div class="gate-node">SS</div>
+                    </div>
+                    
+                    <!-- Step 7 - Lifecycle -->
+                    <div class="flex flex-col items-center w-64 step-card fade-in stagger-7">
+                        <div class="bg-step-bg rounded-lg p-4 w-full text-center mb-4 shadow-sm border border-primary/10">
+                            <h3 class="text-xl font-bold text-primary">Lifecycle Management</h3>
+                        </div>
+                        <div class="bg-white rounded-lg p-5 h-64 shadow-card border border-neutral-dark flex flex-col justify-between">
+                            <div>
+                                <p class="text-sm flex items-start">
+                                    <i class="fa fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>End-of-life management</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Document Link Section -->
+    <section class="py-16 bg-neutral">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-card p-8 max-w-3xl mx-auto">
+                <a href="https://lenovonam.sharepoint.com/:p:/r/sites/AccessoriesPMTeam/Shared%20Documents/Product%20Marketing%20Onboard%20Documents/Tools%20and%20Process%20Trainings/Acc%20PDx%20Process%20and%20Checklist%20V1.2%20for%20release%20250819.pptx?d=w87f94c275da240648677c25742537ea8&csf=1&web=1&e=c4Ldbj" 
+                   target="_blank" 
+                   class="flex items-center text-primary hover:text-primary/80 transition-all duration-300 group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
+                        <i class="fa fa-file-powerpoint-o text-2xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Acc PDx Process</h3>
+                        <p class="text-text-secondary text-sm mt-1">Access the complete process documentation and checklist</p>
+                    </div>
+                    <div class="ml-auto">
+                        <i class="fa fa-arrow-right text-primary group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-10">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Accessories & ET. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.opacity = 0;
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
+    

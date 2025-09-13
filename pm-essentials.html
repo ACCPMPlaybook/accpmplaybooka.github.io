@@ -69,6 +69,9 @@
                     <div class="sidebar-link active" id="portal-link">
                         <i class="fa fa-globe mr-2"></i> Portal
                     </div>
+                    <div class="sidebar-link" id="portfolio-link">
+                        <i class="fa fa-book mr-2"></i> Portfolio Planning Bible
+                    </div>
                     <div class="sidebar-link" id="courses-link">
                         <i class="fa fa-graduation-cap mr-2"></i> Courses & Training
                     </div>
@@ -122,6 +125,30 @@
                                 <i class="fa fa-graduation-cap"></i>
                             </div>
                             <span class="text-center font-medium text-gray-800">Product School</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Portfolio Planning Bible 内容 -->
+                <div id="portfolio-content" class="bg-white rounded-xl shadow-sm p-6 min-h-[400px] hidden">
+                    <!-- 已移除标题部分 -->
+                    <div class="mb-8">
+                        <h3 class="text-lg font-medium mb-3 text-gray-700">What is Portfolio Planning?</h3>
+                        <p class="text-gray-600 mb-4">
+                            Portfolio planning is a strategic process that involves selecting and managing a collection of projects, 
+                            products, or services to achieve organizational goals. It ensures that resources are allocated efficiently 
+                            across initiatives to maximize value, balance risk, and align with business objectives.
+                        </p>
+                        <p class="text-gray-600">
+                            Effective portfolio planning helps prioritize investments, manage dependencies, and adapt to market changes, 
+                            ensuring that the organization's product portfolio remains competitive and aligned with long-term strategy.
+                        </p>
+                    </div>
+                    
+                    <div class="border-t pt-6">
+                        <a href="portfolio-planning-bible.html" target="_self" class="inline-flex items-center px-5 py-3 bg-accent text-white rounded-lg hover:bg-accent/90 transition-colors">
+                            <i class="fa fa-file-text-o mr-2"></i>
+                            Access the complete Portfolio Planning Bible
                         </a>
                     </div>
                 </div>
@@ -219,19 +246,21 @@
 
         // 侧边栏切换逻辑
         const portalLink = document.getElementById('portal-link');
+        const portfolioLink = document.getElementById('portfolio-link');
         const coursesLink = document.getElementById('courses-link');
         const quizLink = document.getElementById('quiz-link');
         
         const portalContent = document.getElementById('portal-content');
+        const portfolioContent = document.getElementById('portfolio-content');
         const coursesContent = document.getElementById('courses-content');
         const quizContent = document.getElementById('quiz-content');
         
         // 切换显示内容
         const showContent = (contentToShow) => {
-            [portalContent, coursesContent, quizContent].forEach(content => {
+            [portalContent, portfolioContent, coursesContent, quizContent].forEach(content => {
                 content.classList.add('hidden');
             });
-            [portalLink, coursesLink, quizLink].forEach(link => {
+            [portalLink, portfolioLink, coursesLink, quizLink].forEach(link => {
                 link.classList.remove('active');
             });
             
@@ -240,6 +269,7 @@
         };
         
         portalLink.addEventListener('click', () => showContent({content: portalContent, link: portalLink}));
+        portfolioLink.addEventListener('click', () => showContent({content: portfolioContent, link: portfolioLink}));
         coursesLink.addEventListener('click', () => showContent({content: coursesContent, link: coursesLink}));
         quizLink.addEventListener('click', () => {
             showContent({content: quizContent, link: quizLink});

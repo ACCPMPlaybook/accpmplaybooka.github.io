@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Planning Bible | PDx Process</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C6ECB',
+                        secondary: '#4CAF50',
+                        accent: '#FF9800',
+                        neutral: '#F5F7FA',
+                        'neutral-dark': '#E4E7EB',
+                        'text-primary': '#2D3748',
+                        'text-secondary': '#718096',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .section-animate {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .section-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-neutral font-inter text-text-primary">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <a href="pdx-process.html" class="text-[clamp(1.8rem,4vw,2.8rem)] font-bold tracking-tight text-primary hover:text-primary/80 transition-colors">
+                    Portfolio Planning Bible
+                </a>
+                <a href="pdx-process.html" class="flex items-center text-primary hover:text-primary/80 transition-colors">
+                    <i class="fa fa-arrow-left mr-2"></i>
+                    <span>Back to Process Flow</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Color Bar -->
+    <div class="bg-primary h-[clamp(1rem,2vw,1.5rem)] w-full"></div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12 md:py-20">
+        <section class="mb-16 section-animate">
+            <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-text-primary mb-6">What is portfolio planning?</h1>
+            <p class="text-lg text-text-secondary leading-relaxed max-w-4xl">
+                Portfolio planning is a strategic process that aligns product development with business objectives, market needs, and customer expectations. It involves analyzing market trends, assessing internal capabilities, and prioritizing initiatives to create a balanced and profitable product portfolio.
+            </p>
+        </section>
+
+        <!-- Planning Steps Section -->
+        <section class="mb-16 section-animate">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-text-primary mb-8 flex items-center">
+                    <i class="fa fa-list-ol text-primary mr-3 text-2xl"></i>
+                    Steps in Portfolio Planning
+                </h2>
+                
+                <div class="space-y-8">
+                    <div class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">1</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Define Business Goals</h3>
+                            <p class="text-text-secondary">Establish clear objectives aligned with overall business strategy, including revenue targets, market expansion goals, and brand positioning.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">2</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Conduct Market Survey</h3>
+                            <p class="text-text-secondary">Analyze market trends, size, growth potential, and dynamics to identify opportunities and threats in the target marketplace.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">3</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Perform Customer Study</h3>
+                            <p class="text-text-secondary">Gather insights into customer needs, preferences, pain points, and buying behavior through surveys, interviews, and focus groups.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">4</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Competitive Analysis</h3>
+                            <p class="text-text-secondary">Evaluate competitors' product offerings, pricing strategies, market share, strengths, and weaknesses to identify competitive advantages.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">5</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Identify Gaps</h3>
+                            <p class="text-text-secondary">Determine unmet customer needs and market opportunities where the organization can deliver unique value.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">6</div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Prioritize Requests</h3>
+                            <p class="text-text-secondary">Evaluate and rank potential product initiatives based on strategic alignment, market potential, resource requirements, and risk factors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Methodologies Section -->
+        <section class="section-animate">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-text-primary mb-8 flex items-center">
+                    <i class="fa fa-lightbulb-o text-primary mr-3 text-2xl"></i>
+                    Portfolio Planning Methodologies
+                </h2>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-semibold mb-3 text-primary">BCG Matrix</h3>
+                        <p class="text-text-secondary mb-3">A strategic tool that categorizes products based on market growth rate and relative market share:</p>
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                            <li>Stars: High growth, high market share</li>
+                            <li>Cash Cows: Low growth, high market share</li>
+                            <li>Question Marks: High growth, low market share</li>
+                            <li>Dogs: Low growth, low market share</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-semibold mb-3 text-primary">Ansoff Matrix</h3>
+                        <p class="text-text-secondary mb-3">A framework for growth opportunities based on market and product dimensions:</p>
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                            <li>Market Penetration: Existing products in existing markets</li>
+                            <li>Market Development: Existing products in new markets</li>
+                            <li>Product Development: New products in existing markets</li>
+                            <li>Diversification: New products in new markets</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-semibold mb-3 text-primary">Eisenhower Matrix</h3>
+                        <p class="text-text-secondary mb-3">A prioritization tool based on urgency and importance:</p>
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                            <li>Do First: Urgent and important</li>
+                            <li>Schedule: Not urgent but important</li>
+                            <li>Delegate: Urgent but not important</li>
+                            <li>Eliminate: Neither urgent nor important</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-semibold mb-3 text-primary">Kano Model</h3>
+                        <p class="text-text-secondary mb-3">A methodology for categorizing customer requirements:</p>
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                            <li>Must-be Quality: Basic requirements</li>
+                            <li>One-dimensional Quality: Performance-related features</li>
+                            <li>Attractive Quality: Unexpected delights</li>
+                            <li>Indifferent Quality: Features with no impact</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-10 mt-20">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 Accessories & ET. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Intersection Observer for section animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -100px 0px',
+                threshold: 0
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all sections with animation class
+            document.querySelectorAll('.section-animate').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
