@@ -43,6 +43,29 @@
             opacity: 1;
             transform: translateY(0);
         }
+        
+        .learn-more-link {
+            color: #2C6ECB;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        
+        .learn-more-link:hover {
+            color: #1a56db;
+            text-decoration: none;
+        }
+
+        .glossary-link {
+            color: #2C6ECB;
+            text-decoration: underline;
+            font-weight: 500;
+        }
+        
+        .glossary-link:hover {
+            color: #1a56db;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body class="bg-neutral font-inter text-text-primary">
@@ -81,52 +104,58 @@
                     Steps in Portfolio Planning
                 </h2>
                 
+                <div class="mb-10">
+                    <img src="how-to-develop.png" alt="Process visualization showing steps to develop an effective portfolio plan" class="w-full h-auto rounded-lg border border-neutral-dark shadow-sm">
+                </div>
+                
                 <div class="space-y-8">
                     <div class="flex">
                         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">1</div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Define Business Goals</h3>
-                            <p class="text-text-secondary">Establish clear objectives aligned with overall business strategy, including revenue targets, market expansion goals, and brand positioning.</p>
+                            <h3 class="text-xl font-semibold mb-2">Market Analysis</h3>
+                            <p class="text-text-secondary">Begin by thoroughly analyzing the market landscape. Understand market trends, customer preferences, and competitor strategies. Identify emerging opportunities and potential threats. This analysis provides valuable insights into where your products stand in the market and what adjustments may be needed to strengthen your portfolio.</p>
                         </div>
                     </div>
                     
                     <div class="flex">
                         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">2</div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Conduct Market Survey</h3>
-                            <p class="text-text-secondary">Analyze market trends, size, growth potential, and dynamics to identify opportunities and threats in the target marketplace.</p>
+                            <h3 class="text-xl font-semibold mb-2">Assessment of Current Portfolio</h3>
+                            <p class="text-text-secondary">Evaluate each product in your portfolio individually. Consider factors like revenue generation, profitability, market share, and strategic alignment with your business goals. Conduct a <a href="https://www.investopedia.com/terms/s/swot.asp" target="_blank" class="glossary-link">SWOT analysis</a> for each product. This assessment helps you understand which improvement or phase-out.</p>
                         </div>
                     </div>
                     
                     <div class="flex">
                         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">3</div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Perform Customer Study</h3>
-                            <p class="text-text-secondary">Gather insights into customer needs, preferences, pain points, and buying behavior through surveys, interviews, and focus groups.</p>
+                            <h3 class="text-xl font-semibold mb-2">Alignment with Business Objectives</h3>
+                            <p class="text-text-secondary">Ensure that your product portfolio aligns with the overall business objectives, vision, and mission. Identify specific objectives you aim to achieve through your product offerings, such as market expansion, revenue growth, or customer acquisition.</p>
                         </div>
                     </div>
                     
                     <div class="flex">
                         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">4</div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Competitive Analysis</h3>
-                            <p class="text-text-secondary">Evaluate competitors' product offerings, pricing strategies, market share, strengths, and weaknesses to identify competitive advantages.</p>
+                            <h3 class="text-xl font-semibold mb-2">Segmentation and Prioritization</h3>
+                            <p class="text-text-secondary">Segment your target market based on relevant criteria such as demographics, psychographics, and buying behavior. Prioritize products and market segments based on their attractiveness and strategic importance. Focus your resources on high-potential products and market segments while deprioritizing or discontinuing products that no longer align with your target audience or business objectives.</p>
                         </div>
                     </div>
                     
                     <div class="flex">
                         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">5</div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Identify Gaps</h3>
-                            <p class="text-text-secondary">Determine unmet customer needs and market opportunities where the organization can deliver unique value.</p>
+                            <!-- Updated fifth step title and description -->
+                            <h3 class="text-xl font-semibold mb-2">Resource Allocation</h3>
+                            <p class="text-text-secondary">Allocate resources strategically to support your portfolio strategy. It includes financial, human, and technological resources. Invest in product development, marketing, and sales initiatives that align with your prioritized products and market segments. Consider reallocating resources from low-performing products to those with higher growth potential.</p>
                         </div>
                     </div>
                     
                     <div class="flex">
                         <div class="flex-shrink-0 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-bold mr-4">6</div>
                         <div>
-                            <h3 class="text-xl font-semibold mb-2">Prioritize Requests</h3>
-                            <p class="text-text-secondary">Evaluate and rank potential product initiatives based on strategic alignment, market potential, resource requirements, and risk factors.</p>
+                            <!-- Updated sixth step title and description -->
+                            <h3 class="text-xl font-semibold mb-2">Risk Management</h3>
+                            <p class="text-text-secondary">Identify and mitigate risks associated with your product portfolio. This includes market risks, such as changing consumer preferences or competitive dynamics, as well as internal risks like product quality issues or resource constraints. Regularly monitor market conditions and performance metrics to stay proactive in risk management.</p>
                         </div>
                     </div>
                 </div>
@@ -134,7 +163,7 @@
         </section>
 
         <!-- Methodologies Section -->
-        <section class="section-animate">
+        <section class="mb-16 section-animate">
             <div class="bg-white rounded-xl p-8 shadow-lg">
                 <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-text-primary mb-8 flex items-center">
                     <i class="fa fa-lightbulb-o text-primary mr-3 text-2xl"></i>
@@ -144,45 +173,109 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
                         <h3 class="text-lg font-semibold mb-3 text-primary">BCG Matrix</h3>
+                        <div class="mb-4">
+                            <img src="bcg-matrix.png" alt="BCG Matrix visualization showing the four quadrants: Stars, Cash Cows, Question Marks, and Dogs" class="w-full h-auto rounded-md border border-neutral-dark">
+                        </div>
                         <p class="text-text-secondary mb-3">A strategic tool that categorizes products based on market growth rate and relative market share:</p>
-                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2 mb-4">
                             <li>Stars: High growth, high market share</li>
                             <li>Cash Cows: Low growth, high market share</li>
                             <li>Question Marks: High growth, low market share</li>
                             <li>Dogs: Low growth, low market share</li>
                         </ul>
+                        <a href="https://corporatefinanceinstitute.com/resources/management/boston-consulting-group-bcg-matrix/" target="_blank" class="learn-more-link">
+                            learn more <i class="fa fa-external-link ml-1 text-xs"></i>
+                        </a>
                     </div>
                     
                     <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
                         <h3 class="text-lg font-semibold mb-3 text-primary">Ansoff Matrix</h3>
+                        <div class="mb-4">
+                            <img src="ansoff-matrix.png" alt="Ansoff Matrix showing four growth strategies: Market Penetration, Market Development, Product Development, and Diversification" class="w-full h-auto rounded-md border border-neutral-dark">
+                        </div>
                         <p class="text-text-secondary mb-3">A framework for growth opportunities based on market and product dimensions:</p>
-                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2 mb-4">
                             <li>Market Penetration: Existing products in existing markets</li>
                             <li>Market Development: Existing products in new markets</li>
                             <li>Product Development: New products in existing markets</li>
                             <li>Diversification: New products in new markets</li>
                         </ul>
+                        <a href="https://www.thestrategyinstitute.org/insights/the-ansoff-matrix-a-powerful-tool-for-business-strategy-and-growth" target="_blank" class="learn-more-link">
+                            learn more <i class="fa fa-external-link ml-1 text-xs"></i>
+                        </a>
                     </div>
                     
                     <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
                         <h3 class="text-lg font-semibold mb-3 text-primary">Eisenhower Matrix</h3>
+                        <div class="mb-4">
+                            <img src="eisenhower-matrix.png" alt="Eisenhower Matrix showing task prioritization based on urgency and importance" class="w-full h-auto rounded-md border border-neutral-dark">
+                        </div>
                         <p class="text-text-secondary mb-3">A prioritization tool based on urgency and importance:</p>
-                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2 mb-4">
                             <li>Do First: Urgent and important</li>
                             <li>Schedule: Not urgent but important</li>
                             <li>Delegate: Urgent but not important</li>
                             <li>Eliminate: Neither urgent nor important</li>
                         </ul>
+                        <a href="https://asana.com/resources/eisenhower-matrix" target="_blank" class="learn-more-link">
+                            learn more <i class="fa fa-external-link ml-1 text-xs"></i>
+                        </a>
                     </div>
                     
                     <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
                         <h3 class="text-lg font-semibold mb-3 text-primary">Kano Model</h3>
+                        <div class="mb-4">
+                            <img src="kano-model.png" alt="Kano Model showing different categories of customer requirements" class="w-full h-auto rounded-md border border-neutral-dark">
+                        </div>
                         <p class="text-text-secondary mb-3">A methodology for categorizing customer requirements:</p>
-                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2">
+                        <ul class="list-disc list-inside text-text-secondary space-y-1 pl-2 mb-4">
                             <li>Must-be Quality: Basic requirements</li>
                             <li>One-dimensional Quality: Performance-related features</li>
                             <li>Attractive Quality: Unexpected delights</li>
                             <li>Indifferent Quality: Features with no impact</li>
+                        </ul>
+                        <a href="https://www.geeksforgeeks.org/product-management/kano-model-introduction-working-and-benefits/" target="_blank" class="learn-more-link">
+                            learn more <i class="fa fa-external-link ml-1 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Strategy Information Section -->
+        <section class="section-animate">
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-text-primary mb-8 flex items-center">
+                    <i class="fa fa-file-text-o text-primary mr-3 text-2xl"></i>
+                    Which Specific Information Should the Portfolio Strategy Contain?
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-semibold mb-3 text-primary">Objectives</h3>
+                        <ul class="list-disc list-inside text-text-secondary space-y-2 pl-2">
+                            <li>defining the overall objectives and vision</li>
+                            <li>outlining each product's role in achieving the goals</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-semibold mb-3 text-primary">Analysis</h3>
+                        <ul class="list-disc list-inside text-text-secondary space-y-2 pl-2">
+                            <li>market analysis data</li>
+                            <li>markets trends</li>
+                            <li>customer preferences</li>
+                            <li>competitor activities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="border border-neutral-dark rounded-lg p-6 hover:shadow-md transition-shadow">
+                        <h3 class="text-lg font-semibold mb-3 text-primary">Resource allocation</h3>
+                        <ul class="list-disc list-inside text-text-secondary space-y-2 pl-2">
+                            <li>financial resource</li>
+                            <li>human resource</li>
+                            <li>technological resource</li>
+                            <li>marketing resource</li>
                         </ul>
                     </div>
                 </div>
@@ -223,3 +316,4 @@
     </script>
 </body>
 </html>
+    
